@@ -1,0 +1,9 @@
+#!/bin/bash
+pow2=${1-:0}
+file=/tmp/cass123-AddData.$$
+if [ ! -f pom.xml ]; then
+    echo "Please run from top of project as bin/add_data." >&2
+    exit 1
+fi
+trap "rm -f $file" 0 2 3 14 15
+scala -classpath target/Cass123Test-1.0-SNAPSHOT.jar com.spotright.cass123test.AddData $pow2 > $file
