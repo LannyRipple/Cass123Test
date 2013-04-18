@@ -1,0 +1,12 @@
+create keyspace TestSpace;
+
+use TestSpace;
+
+create column family Cass123Test
+  with column_type = 'Standard'
+  and comparator = 'UTF8Type'
+  and default_validation_class = 'BytesType'
+  and key_validation_class = 'UTF8Type'
+  ;
+
+quit;
