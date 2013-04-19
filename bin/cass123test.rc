@@ -1,0 +1,2 @@
+SCALA=/opt/scala/current/bin/scala
+CLI=/opt/apache/cassandra/bin/cassandra-cli
